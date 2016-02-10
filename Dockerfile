@@ -1,4 +1,5 @@
-FROM alpine
+FROM gliderlabs/alpine:3.3
+MAINTAINER takipone <takipone@gmail.com>
 MAINTAINER Matthew Endsley <mendsley@gmail.com>
 
 # 036A9C25BF357DD4 - Tianon Gravi <tianon@tianon.xyz>
@@ -26,3 +27,7 @@ RUN buildDeps='curl gnupg' HOME='/root' \
 	&& rm -rf /root/.gnupg \
 	&& rm -rf /var/cache/apk/* \
 	;
+
+# Install Node.js 4.x
+#   https://pkgs.alpinelinux.org/packages?name=nodejs&repo=all&arch=all&maintainer=all
+RUN apk --no-cache add nodejs
