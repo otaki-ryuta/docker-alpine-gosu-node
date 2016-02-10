@@ -1,4 +1,4 @@
-FROM gliderlabs/alpine:3.3
+FROM armhf/alpine:3.3
 MAINTAINER takipone <takipone@gmail.com>
 MAINTAINER Matthew Endsley <mendsley@gmail.com>
 
